@@ -2,24 +2,24 @@
 
 import setuptools
 
-DIST_NAME = 'news_lk2'
-version = '1.0.0'
+DIST_NAME = 'Newsfetch'
+version = '2.8.3'
 
 setuptools.setup(
     name='%s-nuuuwan' % DIST_NAME,
     version=version,
-    author='Nuwan I. Senaratna',
-    author_email='nuuuwan@gmail.com',
-    description='',
+    author='Rangana Sampath',
+    author_email='nzrangana@gmail.com',
+    description='A simple API to fetch data from Sri Lankan newspapers.',
     long_description='',
     long_description_content_type='text/markdown',
-    url='https://github.com/nuuuwan/%s' % DIST_NAME,
+    url='https://github.com/rangana/%s' % DIST_NAME,
     project_urls={
-        'Bug Tracker': 'https://github.com/nuuuwan/%s/issues' % DIST_NAME,
+        'Bug Tracker': 'https://github.com/rangana/%s/issues' % DIST_NAME,
     },
     classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3.11',
+        'License :: OSI Approved :: The Unlicense',
         'Operating System :: OS Independent',
     ],
     package_dir={'': 'src'},
@@ -37,5 +37,6 @@ setuptools.setup(
         'python-Levenshtein',
         'imageio',
         'moviepy',
+        'numpy',
     ],
 )
