@@ -1,5 +1,6 @@
 # Auto-Generated with build_custom_newspaper_init.py
 # 646b1344635b58574f77501f5aa6f6f2
+import numpy as np
 from news_lk2.custom_newspapers.AdaDeranaLk import AdaDeranaLk
 from news_lk2.custom_newspapers.AdaDeranaSinhalaLk import AdaDeranaSinhalaLk
 from news_lk2.custom_newspapers.AdaLk import AdaLk
@@ -18,7 +19,7 @@ from news_lk2.custom_newspapers.NewsFirstLk import NewsFirstLk
 from news_lk2.custom_newspapers.TamilMirrorLk import TamilMirrorLk
 from news_lk2.custom_newspapers.VirakesariLk import VirakesariLk
 
-newspaper_class_list = [
+newspaper_class_list = np.array([
     AdaDeranaLk,
     AdaDeranaSinhalaLk,
     AdaLk,
@@ -36,4 +37,4 @@ newspaper_class_list = [
     NewsFirstLk,
     TamilMirrorLk,
     VirakesariLk,
-]
+])
