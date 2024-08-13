@@ -1,13 +1,3 @@
-# LOW
+# Lambda
 
-# MEDIUM
-
-* DBSJeyaraj Titles
-* Display Sinhala Ents
-* Cleaner design for Ents
-
-# HIGH
-
-* Crawling Geo-Gated Pages
-
-# BIG PICTURE
+Add AWS **Lambda** support to project, as a API.
