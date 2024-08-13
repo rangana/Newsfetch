@@ -1,9 +1,9 @@
 import os
-
 from utils import File, hashx, timex
+from os.path import join
 
 DIR_CUSTOM_NEWSPAPERS = 'src/news_lk2/custom_newspapers'
-INIT_FILE_ONLY = '__init__.py'
+INIT_FILE_ONLY = join(".", "__init__.py")
 
 
 def get_class_name_list():
