@@ -1,7 +1,7 @@
 import os
+import numpy as np
 
-from utils import JSONFile
-
+from utils import JSONFile 
 from news_lk2._utils import log
 from news_lk2.core.filesys import DIR_REPO
 from news_lk2.core.trends import filter_articles, get_thing_ent_set
@@ -36,7 +36,7 @@ def dedupe_article_summary(articles_summary):
 
 
 def get_article_summary(articles):
-    article_summary = []
+    article_summary = np.array([])
     for article in articles:
         articles_summary_item = get_article_summary_item(article)
         article_summary.append(articles_summary_item)
@@ -77,7 +77,7 @@ def get_group_to_articles(articles, ent_to_group):
         for ent in ent_set:
             group = ent_to_group[ent]
             if group not in group_to_articles:
-                group_to_articles[group] = []
+                group_to_articles[group] = np.array([])
             group_to_articles[group].append(file_name)
     return group_to_articles
 
@@ -91,7 +91,7 @@ def get_group_to_article_summary(articles, ent_to_group):
         for ent in ent_set:
             group = ent_to_group[ent]
             if group not in group_to_article_summary:
-                group_to_article_summary[group] = []
+                group_to_article_summary[group] = np.array([])
             group_to_article_summary[group].append(articles_summary_item)
     return dict(
         list(
