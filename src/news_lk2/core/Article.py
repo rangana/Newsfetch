@@ -55,12 +55,12 @@ class Article:
     @property
     def to_dict(self):
         return dict(
-            newspaper_id=self.newspaper_id,
-            url=self.url,
-            time_ut=self.time_ut,
-            original_lang=self.original_lang,
-            original_title=self.original_title,
-            text_idx=self.text_idx,
+            newspaper_id = self.newspaper_id,
+            url = self.url,
+            time_ut = self.time_ut,
+            original_lang = self.original_lang,
+            original_title = self.original_title,
+            text_idx = self.text_idx,
         )
 
     def store(self):
