@@ -1,17 +1,17 @@
 import spacy
-import numpy as np
+# import numpy as np
 
 from deep_translator import GoogleTranslator
 from utils.cache import cache
 
 ENTS_LANG = 'en'
-LANG_LIST = np.array(['en', 'si', 'ta'])
+LANG_LIST = ['en', 'si', 'ta']
 SPACY_NLP = spacy.load("en_core_web_sm")
 
 
 def extract_named_entities(phrase):
     doc = SPACY_NLP(phrase)
-    ents = np.array([])
+    ents = []
     for ent in doc.ents:
         ents.append(dict(text=ent.text, label=ent.label_))
     return ents
@@ -57,7 +57,7 @@ def translate(source_lang, target_lang, word):
 
 
 def translate_ents(target_lang, ents):
-    translated_ents = np.array([])
+    translated_ents = []
     for ent in ents:
         translated_ents.append(
             dict(
