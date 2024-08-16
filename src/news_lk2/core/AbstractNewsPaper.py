@@ -1,4 +1,4 @@
-import os
+from os.path import exists
 from abc import ABC
 
 from bs4 import BeautifulSoup
@@ -152,7 +152,7 @@ class AbstractNewsPaper(ABC):
     def parse_and_store_article(cls, article_url):
         log.debug(f'[parse_and_store_article] {article_url}...')
         article_file = get_article_file(article_url)
-        if os.path.exists(article_file):
+        if exists(article_file):
             log.info(f'{article_file} already exists. Not parsing.')
             return None
 
